@@ -11,3 +11,4 @@ function injectImage() {
     container.innerHTML = '';
     container.appendChild(img)
 }
+
