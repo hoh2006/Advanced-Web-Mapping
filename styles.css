@@ -78,3 +78,9 @@ body {
     text-align: center;
     font-size: 20px;
 }
+
+.rightpanel {
+    width: 400px;
+    padding-left: 10 px;
+}
+/* this is how you make a comment */
