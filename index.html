@@ -7,54 +7,72 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <!-- this is how you make a comment in html -->
+
 <body>
-   
+
 </html>
 
 <div id="webpage-title">
     <strong>Birds of Lake Merritt</strong>
 </div>
-
-<div class="image-container">
-    <img id="pelican" src=https://www.lakemerritt.org/uploads/7/7/2/9/7729843/imgp6242.jpg </div>
-
-
+<br>
+</div class="largercontainer">
+<!-- left panel with american white pelican and buttons -->
+<div class="leftpanel">
+    <div class="imagecontainer"></div>
+    <img id="pelican" src=https://www.lakemerritt.org/uploads/7/7/2/9/7729843/imgp6242.jpg>
     <div class="headerz" id="header-image-one">
-        <h1>American White Pelican
-        </h1>
+        <h1>American White Pelican</h1>
     </div>
+    <div class="setofbirdbuttons">
+        <button class="bird-buttons" role="button" onclick="window.location.href='https://www.lakemerritt.org/';">Learn
+            More</button>
+        <br>
+        <button class="bird-buttons" role="button" onclick=injectImage()>SURPRISE BIRD</button>
+        <br>
+        <div id="bird-appears">Bird Will Appear Here</div>
+        <br>
+    </div>
+</div>
 
-    <div class="image-container">
-        <img id="night-heron" src=https://www.lakemerritt.org/uploads/7/7/2/9/7729843/dscf8526_1.jpg </div>
-
-        <div class="headerz" id="header-image-two">
-            <h1>Black-Crowned Night Heron
-            </h1>
+<!-- Moving the night heron and charts to the right side of the page -->
+<div class="rightpanel">
+    <div class="imagecontainer"></div>
+    <img id="night-heron" src=https://www.lakemerritt.org/uploads/7/7/2/9/7729843/dscf8526_1.jpg>
+    <div class="headerz" id="header-image-two">
+        <h1>Black-Crowned Night Heron</h1>
+        <!-- Rendering chart on the right panel to add in  -->
+        <br>
+        <div class="chart-container">
         </div>
+        <canvas id="chartofBirds" width="400" height="200"></canvas>
+    </div>
+</div>
+</div>
 
-        <button class="bird-buttons" role="button" onclick="window.location.href='https://www.lakemerritt.org/';">
-            Learn More
-        </button>
-
-        <button class="bird-buttons" role="button" onclick=injectImage()>
-            SURPRISE BIRD</button>
-
-        <div id="bird-appears">
-            Bird Will Appear Here
-        </div>
 
 <!-- adding in Chart.js to my project -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- Rendering chart on the right panel to add in  -->
-    <div class="image-container">
-        <div class= "rightpanel">
-        </div>
-        <canvas id="chartofBirds" width="400" height="200"></canvas>
+<!-- adding in map to my project; the map wouldn't show up unless it was styled here -->
+<div id="birdmap" style="height: 400px;"></div>
 
-    </div>
+<!-- using Leaflet to insert map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
 
-        <script src="scripts.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </body>
-    
+<script src="scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- adding sidebar to my website -->
+ <div id="navigationbar" class="sidenavbar">
+    <!-- javascript void 0 here prevents the page from reloading or navigating when the link is clicked and &times is the X button -->
+    <a href="javascript:void(0)" class="buttoncloses" onclick="closeNav()">&times;</a>
+    <a href="home.html">Birds of Lake Merritt</a>
+    <a href="map.html">Map of Lake Merritt</a>
+ </div>
+
+</body>
