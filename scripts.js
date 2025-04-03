@@ -45,7 +45,7 @@ const config = {
                 labels: {
                     color: '#ffffff',
                     font: {
-                        family: 'Lucida Console', 
+                        family: 'Lucida Console',
                         size: 15,
                     }
                 }
@@ -101,7 +101,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //     iconSize: [30, 30]
 // })
 // creating marker 1
-var markerone = L.marker([37.804860070351246, -122.2586084339425],{
+var markerone = L.marker([37.804860070351246, -122.2586084339425], {
     // icon: birdIconOne
 }).addTo(map);
 markerone.bindPopup("American White Pelican Spotted").openPopup();
