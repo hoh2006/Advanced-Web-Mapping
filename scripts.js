@@ -114,14 +114,14 @@ markertwo.bindPopup("Black-Crowned Night Heron Spotted").openPopup();
 var markerthree = L.marker([37.80727859005588, -122.25294691233749]).addTo(map);
 markerthree.bindPopup("Green Heron Spotted").openPopup();
 
-// opening and closing the navigation bar
-function openNav() {
-    document.getElementById("navigationbar").style.display = "block";
-}
+// // opening and closing the navigation bar
+// function openNav() {
+//     document.getElementById("navigationbar").style.display = "block";
+// }
 
-function closeNav() {
-    document.getElementById("navigationbar").style.display = "none";
-}
+// function closeNav() {
+//     document.getElementById("navigationbar").style.display = "none";
+// }
 
 
 
